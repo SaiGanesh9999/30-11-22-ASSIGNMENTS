@@ -1,0 +1,22 @@
+PowerUsage = int(input("Enter Daily PowerUsage In Watts: "))
+Time = int(input("Enter How Many Hours Electricity Used Daily : "))
+Units = PowerUsage*Time/1000
+UnitCost = 0
+if Units <= 30:
+    UnitCost = 1.95
+elif Units <= 75:
+    UnitCost = 3
+elif Units <= 125:
+    UnitCost = 4.50
+elif Units <= 255:
+    UnitCost = 6
+elif Units <= 400:
+    UnitCost = 8.75
+elif Units > 400:
+    UnitCost = 9.75
+Price = UnitCost*Units
+print("*****************************************************************************")
+print("              Bill For 1 Day Of Electricity Usage",1*Price)
+print("              Bill For 1 Month Of Electricity Usage",30*Price)
+print("              Bill For 1 Year Of Electricity Usage",365*Price)
+print("*****************************************************************************")
