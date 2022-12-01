@@ -1,0 +1,43 @@
+TomatosPrice=20;CarrotsPrice=50;OnionsPrice=60;BeansPrice=40;PotatosPrice=30;Tax=0;Disount=0;
+Phone =int(input("Enter Customer Phone Number : "))
+Name =     input("Enter Customer Name         : ")
+Address =  input("Enter Customer Address      : ")
+Coupon =   input("Enter Coupon Code           : ")
+Tomatos = int(input("Enter Quantity Of Tomatos : "))
+Carrots = int(input("Enter Quantity Of Carrots : "))
+Onions =  int(input("Enter Quantity Of Onions  : "))
+Beans =   int(input("Enter Quantity Of Beans   : "))
+Potatos = int(input("Enter Quantity Of Potatos : "))
+Price=Tomatos*TomatosPrice+Carrots*CarrotsPrice+Onions*OnionsPrice+Beans*BeansPrice+Potatos*PotatosPrice
+if Price <= 500 :
+    Tax = Price/5
+elif Price <= 1000 :
+    Tax = Price/5
+elif Price <= 2000 :
+    Tax = Price/5
+elif Price <= 3000 :
+    Tax = Price/5
+else :
+    Tax = 100
+Bill = Price+Tax
+if Coupon == "CHRISMAS":
+    if Bill >= 1000 & Bill < 3000:
+        Disount = Bill/4
+    elif Bill >= 3000 & Bill < 5000:
+        Disount = Bill/6
+    elif Bill > 5000:
+        Disount = Bill/10
+if Coupon == "DIWALI":
+    if Bill >= 1000 & Bill < 2000:
+        Disount = Bill/5
+    elif Bill >= 2000 & Bill < 3000:
+        Disount = Bill/10
+    elif Bill > 3000:
+        Disount = Bill/20
+print("*****************************************************************************")
+print("              Customer Name     :",Name)
+print("              Customer Phone No :",Phone)
+print("              Tax               :",Tax)
+print("              Discount          :",Disount)
+print("              Bill              :",Bill)
+print("*****************************************************************************")
